@@ -1,2 +1,2 @@
 # FantasySalesTeam
-Fantasy Sales Team Integration for Citrin Cooperman
+Fantasy Sales Team Integration with HTML/JS
