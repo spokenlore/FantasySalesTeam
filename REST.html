@@ -1,0 +1,93 @@
+<html>
+<head>
+</head>
+
+<body>
+	<button onclick="main()">
+		Submit!
+	</button>
+	<select id="LEVEL">
+		<option value="Partner">Partner</option>
+		<option value="Principal">Principal</option>
+		<option value="Director">Director</option>
+		<option value="Manager">Manager</option>
+		<option value="Semi-Senior">Semi-Senior</option>
+		<option value="Supervisor">Supervisor</option>
+		<option value="Staff">Staff</option>
+	</select>
+
+	<select id="LOCATION">
+		<option value="Livingston, NJ">Livingston, NJ</option>
+		<option value="New York, NY">New York, NY</option>
+		<option value="Norwalk, CT">Norwalk, CT</option>
+		<option value="Philidelphia, PA">Philidelphia, PA</option>
+		<option value="Plainsview, NY">Plainsview, NY</option>
+		<option value="White Plains, NY">White Plains, NY</option>
+	</select>
+
+	<script>
+		function getValue(element){
+			var value = document.getElementById(element).value;
+			return value;
+		};
+
+		function formatJSON(JSON, list){
+			for (values in list){
+				JSON.push(list[values]);
+			}
+			return JSON;
+		}
+
+		function addJSONDATA(JSON, list){
+			data = [];
+			if (JSON["DATA"] == undefined){
+				console.log("ADDING DATA");
+				JSON.push({"DATA" : data});
+			}
+			for (values in list){
+				JSON["DATA"].push({values : list[values]});
+			}
+			// JSON["DATA"].append(data);
+			return JSON;
+		}
+
+		function httpGET(URL){
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.open("GET", URL, false);
+			return xmlHttp.response.text;
+		}
+
+		function httpPOST(URL, DATA){
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.open("POST", URL, false);
+			/*xmlHttp.setRequestHeader("Content-Type","text/json; charset=utf-8");
+			xmlHttp.setRequestHeader("Content-Length", 806);
+			xmlHttp.setRequestHeader("Host","app.fantasysalesteam.com");
+			*/
+			xmlHttp.send(DATA);
+			return xmlHttp.response.text;
+		}
+
+		function main(){
+			var USERNAME = {"USERNAME": "xxxx"};
+			var PASSWORD = {"PASSWORD": "yyyy"};
+			var POSITION = {"POSITION": getValue("LEVEL")};
+			var LOCATION = {"LOCATION:": getValue("LOCATION")};
+
+			LOGIN = [USERNAME, PASSWORD];
+			DATA = [POSITION, LOCATION];
+
+			var json = [];
+			//json = formatJSON(json, LOGIN);
+
+			// console.log(json);
+
+			json = addJSONDATA(json, DATA);
+
+			console.log(json);
+
+			console.log(httpPOST("https://app.fantasysalesteam.com/api/ClientDataFeed/SaveDataFeed"), json);
+		}
+	</script>
+</body>
+</html>
