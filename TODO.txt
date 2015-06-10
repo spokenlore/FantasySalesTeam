@@ -1,0 +1,28 @@
+Add "Color Wars" to site banner
+Add Citrin Cooperman logo
+Make sure loop works properly
+	Check to make sure value is > 0 before submitting as a valid value
+Add PLAYERIDs
+Add Player Metrics
+Add Metric Value Multipliers before submitting via xmlHttp POST.
+Make sure padding works the same across all PCs (Test on browsers -IE9, Chrome, and Safari)
+How does the site look on a mobile browser?
+
+Admin Username / Password - Pull from a file - Don't put it in source!
+Download JQuery / Twitter Bootstrap as a compressed library to save bandwidth
+
+Complete List of Metrics:
+1. Attend a Networking Event
+2. Write a Thought Leadership Article
+3. Public Speaking Engagement
+4. Participate in a Media Opportunity
+5. Initiate a Meeting / Sales Call with a New Prospect
+6. Initiate a Meeting with a Key Influencer
+7. Introduce a New Service to an Existing Client
+8. Issue a Proposal
+9. Issue an Engagement Letter to a New Client (< $15,000)
+10. Issue an Engagement Letter to a New Client ($15,001 < $100,0000)
+11. Issue an Engagement Letter to a New Client (> $100,000)
+12. Issue an Engagement Letter to an Existing Client for a New Service (< $15,000)
+13. Issue an Engagement Letter to an Existing Client for a New Service ($15,001 < $100,000)
+14. Issue an Engagement Letter to an Existing Client for a New Service (> $100,000)
