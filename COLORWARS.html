@@ -1,31 +1,14 @@
-<!--  
-Complete List of Metrics:
-1. Attend a Networking Event
-2. Write a Thought Leadership Article
-3. Public Speaking Engagement
-4. Participate in a Media Opportunity
-5. Initiate a Meeting / Sales Call with a New Prospect
-6. Initiate a Meeting with a Key Influencer
-7. Introduce a New Service to an Existing Client
-8. Issue a Proposal
-9. Issue an Engagement Letter to a New Client (< $15,000)
-10. Issue an Engagement Letter to a New Client ($15,001 < $100,0000)
-10. Issue an Engagement Letter to a New Client (> $100,000)
-11. Issue an Engagement Letter to an Existing Client for a New Service (< $15,000)
-12. Issue an Engagement Letter to an Existing Client for a New Service ($15,001 < $100,000)
-13. Issue an Engagement Letter to an Existing Client for a New Service (> $100,000)
---> 
-
 <!-- TODO
 	
 -->
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
 </head>
 
 <style>
@@ -33,7 +16,7 @@ p {
 	padding: 1px 5px;
 }
 input {
-	max-width: 30%;
+	max-width: 80%;
 }
 img {
 	max-width: 100%;
@@ -41,83 +24,108 @@ img {
 	min-height: 10%;
 	min-width: 100%;
 }
-
+#FORMGROUP1 { 
+	width: 400px;
+	height: 90px;
+	padding: 5px 20px;
+	float: left;
+	font-size: 15px;
+}
 </style>
 
 <body>
 	<div class = "navbar navbar-inverse" role="navigation">
-		<img src="img/Banner Original.jpg">
+		<img src="img/InternalBanner1345x264.jpg">
 	</div>
-		<div class="form-group">
-	    	<label for="PLAYERID">PLAYER ID</label>
-	    	<input type="text" class="form-control" id="PLAYERID" placeholder="Enter Player ID">
+		<div id="FORMGROUP1">
+	    	<label for="PLAYERID">Player ID</label>
+	    	<input type="text" class="form-control" id="PLAYERID" placeholder="Enter Your Player ID">
 	    </div>
-		<div class="form-group">
-	    	<label for="METRICS">Networking Event(s) Attended</label>
-	    	<input type="number" class="form-control" id="METRIC1" placeholder="Enter Value">
+	    <p> </p>
+		<div id="FORMGROUP1">
+	    	<label for="METRICS">Attend a Networking Event</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC1" placeholder="Enter Value">
 	    </div>
-		<div class="form-group">
-	    	<label for="METRICS">Thought Leadership Article(s) Written</label>
-	    	<input type="number" class="form-control" id="METRIC2" placeholder="Enter Value">
+		<div id="FORMGROUP1">
+	    	<label for="METRICS">Write a Thought Leadership Article</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC2" placeholder="Enter Value">
+	    </div>
+		<div id="FORMGROUP1">
+	    	<label for="METRICS">Public Speaking Engagement</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC3" placeholder="Enter Value">
 	    </div>
 
-		<div class="form-group">
-	    	<label for="METRICS">Public Speaking Engagement(s)</label>
-	    	<input type="number" class="form-control" id="METRIC3" placeholder="Enter Value">
+		<div id="FORMGROUP1">
+	    	<label for="METRICS">Participate in a Media Opportunity</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC4" placeholder="Enter Value">
 	    </div>
+		<div id="FORMGROUP1">
+	    	<label for="METRICS">Initiate a Meeting / Sales Call with New Prospect</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC5" placeholder="Enter Value">
+	    </div>
+		<div id="FORMGROUP1">
+	    	<label for="METRICS">Initiate a Meeting with a Key Influencer</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC6" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS">Introduce a New Service Line to an Existing Client</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC7" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS">Issue a Proposal</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC8" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS">Issue an Engagement Letter to a New Client
+	    	<br>($15,000 or less)</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC9" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS">Issue an Engagement Letter to a New Client
+	    	<br>($16,000 - $100,000)</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC10" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS">Issue an Engagement Letter to a New Client
+	    	<br>($100,000 or more)</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC11" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS">Issue an Engagement Letter to an 
+	    	<br> Existing Client for a New Service<br>($15,000 or less)</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC12" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS"> Issue an Engagement Letter to an 
+	    	<br> Existing Client for a New Service<br>($16,000 or more)</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC13" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS">Issue an Engagement Letter to an 
+	    	<br>Existing Client for a New Service<br>($100,000 or more)</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC14" placeholder="Enter Value">
+	    </div>
+		<div id="FORMGROUP1">
+			<br> <br> <br> <br>
+			<a href="#" class="btn btn-success btn-lg" onclick="main()"><i class="icon-white icon-star-empty"></i> Submit Your Sales!</a>
+		</div>
 
-		<div class="form-group">
-	    	<label for="METRICS">Media Opportunitie(s)</label>
-	    	<input type="number" class="form-control" id="METRIC4" placeholder="Enter Value">
-	    </div>
-		<div class="form-group">
-	    	<label for="METRICS">Initiated Meeting(s) / Sales Call(s) with New Prospects</label>
-	    	<input type="number" class="form-control" id="METRIC5" placeholder="Enter Value">
-	    </div>
-		<div class="form-group">
-	    	<label for="METRICS">Initiated Meeting(s) with Key Influencers</label>
-	    	<input type="number" class="form-control" id="METRIC6" placeholder="Enter Value">
-	    </div>
-	    <div class="form-group">
-	    	<label for="METRICS">Introduced New Service(s) to Existing Client</label>
-	    	<input type="number" class="form-control" id="METRIC7" placeholder="Enter Value">
-	    </div>
-	    <div class="form-group">
-	    	<label for="METRICS">Issued Proposal(s)</label>
-	    	<input type="number" class="form-control" id="METRIC8" placeholder="Enter Value">
-	    </div>
-	    <div class="form-group">
-	    	<label for="METRICS">Issued Engagement Letter(s) to New Clients ( < $15000)</label>
-	    	<input type="number" class="form-control" id="METRIC9" placeholder="Enter Value">
-	    </div>
-	    <div class="form-group">
-	    	<label for="METRICS">Issued Engagement Letter(s) to New Clients ($15,001 < $100,000)</label>
-	    	<input type="number" class="form-control" id="METRIC10" placeholder="Enter Value">
-	    </div>
-	    <div class="form-group">
-	    	<label for="METRICS">Issued Engagement Letter(s) to New Clients ($100,001 < )</label>
-	    	<input type="number" class="form-control" id="METRIC11" placeholder="Enter Value">
-	    </div>
-	    <div class="form-group">
-	    	<label for="METRICS">Issued Engagement Letter(s) to Existing Clients for a New Service ( < $15000)</label>
-	    	<input type="number" class="form-control" id="METRIC12" placeholder="Enter Value">
-	    </div>
-	    <div class="form-group">
-	    	<label for="METRICS"> Issued Engagement Letter(s) to Existing Clients for a New Service ($15,001 < $100,000)</label>
-	    	<input type="number" class="form-control" id="METRIC13" placeholder="Enter Value">
-	    </div>
-	    <div class="form-group">
-	    	<label for="METRICS"> Issued Engagement Letter(s) to Existing Clients for a New Service ($100,001 < )</label>
-	    	<input type="number" class="form-control" id="METRIC14" placeholder="Enter Value">
-	    </div>
-	<p>
-		<a href="#" class="btn btn-success btn-small" onclick="main()"><i class="icon-white icon-star-empty"></i> Submit Your Sales!</a>
-	</p>
+
 
 	<script>
+		// response.addHeader( "Access-Control-Allow-Origin", "*" ); 
+		// response.addHeader( "Access-Control-Allow-Methods", "POST" ); 
+		// response.addHeader( "Access-Control-Max-Age", "1000" );
 		function getValue(element){
-			var value = document.getElementById(element).value;
-			return value;
+			try {
+				var value = document.getElementById(element).value;
+				return value;
+			}
+			catch(typeError){
+				return null;
+			}
 		};
 
 		function getDate(){
@@ -135,14 +143,13 @@ img {
 			return JSON;
 		}
 
-		function addJSONDATA(JSON, list){
-			data = [];
-			for (values in list){
-				data.push(list[values]);
-			}
-			JSON["DATA"] = data;
-			// JSON["DATA"].append(data);
-			return JSON;
+		function addJSONDATA(list){
+			return {
+				"P" : parseInt(list[0]),
+				"SM" : parseInt(list[1]),
+				"PD" : parseInt(list[2]),
+				"ASMD" : list[3]
+			};	
 		}
 
 		function httpGET(URL){
@@ -151,41 +158,58 @@ img {
 			return xmlHttp.response.text;
 		}
 
-		function httpPOST(URL, DATA){
-			var xmlHttp = new XMLHttpRequest();
-			xmlHttp.open("POST", URL, false);
-			/*xmlHttp.setRequestHeader("Content-Type","text/json; charset=utf-8");
-			xmlHttp.setRequestHeader("Content-Length", 806);
-			xmlHttp.setRequestHeader("Host","app.fantasysalesteam.com");
-			*/
-			xmlHttp.send(DATA);
-			return xmlHttp.response.text;
+		function httpPOST(URL, data){
+			$.ajax({
+	        url: URL,
+	        type: "POST",
+	        contentType: 'application/json; charset=UTF-8',
+	        crossDomain: true,
+	        data: data,
+	        dataType: "json",
+	        headers: {
+	        	"Access-Control-Allow-Origin" :"*",
+				"Access-Control-Allow-Methods" : "POST", 
+				"Access-Control-Max-Age" : "1000"
+	        },
+	        error:function(xhr,status,error){
+	            console.log(status);
+        	}
+    	});
 		}
 
 		function main(){
-			var USERNAME = {"USERNAME": "xxxx"};
-			var PASSWORD = {"PASSWORD": "yyyy"};
+			var USERNAME = {"BusinessUnitId": "1516"};
+			var PASSWORD = {"BusinessUnitPassword": "mol4HD*_"};
 
-			var PLAYERID = {"P": getValue("PLAYERID")};
 			var SALESMETRIC = {"SM" : 0};
-			var PLAYERDATAVALUE = {"PD" : 0};
+			var PLAYERDATAVALUE = {"PD" : getValue(PLAYERID)};
 			var ASMD = {"ASMD": getDate()};
 
-			LOGIN = [USERNAME, PASSWORD];
-			// DATA = [POSITION, LOCATION];
-			
-			METRICS = ["METRIC1","METRIC2"]
+			var TODAY = getDate();
+			var PLAYERID = getValue("PLAYERID");
 
+			LOGIN = [USERNAME, PASSWORD];
+			
+			METRICS = ["METRIC1","METRIC2", "METRIC3", "METRIC4", "METRIC5", "METRIC6", "METRIC7", "METRIC8", "METRIC9", "METRIC10", "METRIC11", "METRIC12", "METRIC13", "METRIC14"]
+
+			METRICIDS = [16062, 16063, 16064, 16065, 16066, 16067, 16068, 16069, 16070, 16071, 16072, 16073, 16074, 16075]
+
+			// PLAYERS:
+			// DAVID: 21794
+			// INGRID: 21724
 			var json = [];
+			var DATA
 			json = formatJSON(json, LOGIN);
 
-			// console.log(json);
+			for (metrics in METRICS){
+				if (parseInt(getValue(METRICS[metrics])) > 0){
+					DATA = addJSONDATA([PLAYERID, METRICIDS[metrics], getValue(METRICS[metrics]),TODAY]);
+				}
+			}
 
-			// json = addJSONDATA(json, DATA);
-
+			json["Data"] = DATA
 			console.log(json);
-
-			//console.log(httpPOST("https://app.fantasysalesteam.com/api/ClientDataFeed/SaveDataFeed"), json);
+			console.log(httpPOST("https://app.fantasysalesteam.com/api/ClientDataFeed/SaveDataFeed", json));
 		}
 	</script>
 </body>

@@ -1,4 +1,5 @@
-Add "Color Wars" to site banner
+TODO: 
+✔ Add "Color Wars" to site banner
 Add Citrin Cooperman logo
 Make sure loop works properly
 	Check to make sure value is > 0 before submitting as a valid value
@@ -11,6 +12,7 @@ How does the site look on a mobile browser?
 Admin Username / Password - Pull from a file - Don't put it in source!
 Download JQuery / Twitter Bootstrap as a compressed library to save bandwidth
 
+COMPLETE:
 Complete List of Metrics:
 1. Attend a Networking Event
 2. Write a Thought Leadership Article
