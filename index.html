@@ -187,14 +187,10 @@ img {
 		// }
 
 		function writeJSON(filename, JSON){
-			$.ajax({
-				type: 'POST',
-				url: filename ,
-				data: JSON,
-				contentType: 'application/json; charset=UTF-8',
-				dataType: "json",
-				crossDomain: true,
-			})
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.open("POST", "phpwrite.php", true);
+			xmlHttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			xmlHttp.send(String(JSON));
 		}
 		function main(){
 			var USERNAME = {"BusinessUnitId": "1516"};

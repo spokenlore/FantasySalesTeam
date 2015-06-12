@@ -2,7 +2,7 @@
 $myFile = "test.txt";
 
 $fh = fopen($myFile, 'w') or die("can't open file");
-$stringData = $_POST["name"];
+$stringData = $_POST["data:"];
 fwrite($fh, $stringData);
 fclose($fh);
 ?>
