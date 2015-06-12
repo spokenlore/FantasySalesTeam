@@ -187,11 +187,15 @@ img {
 		// }
 
 		function writeJSON(filename, json){
-			var xmlHttp = new XMLHttpRequest();
-			xmlHttp.open("POST", "phpwrite.php", true);
-			xmlHttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-			xmlHttp.send(JSON.stringify(json));
+			$.ajax({
+				type: "GET",
+				dataType: 'json',
+				async: false,
+				url: filename,
+				data: JSON.stringify(json)
+			});
 		}
+
 		function main(){
 			var USERNAME = {"BusinessUnitId": "1516"};
 			var PASSWORD = {"BusinessUnitPassword": "mol4HD*_"};

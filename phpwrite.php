@@ -1,8 +1,8 @@
 <?php
-$myFile = "test.txt";
+$myFile = "test.json";
 
-$fh = fopen($myFile, 'w');
-$stringData = $_POST['Data'];
+$fh = fopen($myFile, 'w+');
+$stringData = $_POST['json'];
 fwrite($fh, $stringData);
 fclose($fh);
 ?>
