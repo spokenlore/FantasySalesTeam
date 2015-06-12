@@ -1,0 +1,235 @@
+<!-- TODO
+	
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+p {
+	padding: 1px 5px;
+}
+input {
+	max-width: 80%;
+}
+img {
+	max-width: 100%;
+	max-height: 10%;
+	min-height: 10%;
+	min-width: 100%;
+}
+#FORMGROUP1 { 
+	width: 400px;
+	height: 90px;
+	padding: 5px 20px;
+	float: left;
+	font-size: 15px;
+}
+</style>
+
+<body>
+	<div class = "navbar navbar-inverse" role="navigation">
+		<img src="img/InternalBanner1345x264.jpg">
+	</div>
+		<div id="FORMGROUP1">
+	    	<label for="PLAYERID">Player ID</label>
+	    	<input type="text" class="form-control" id="PLAYERID" placeholder="Enter Your Player ID">
+	    </div>
+	    <p> </p>
+		<div id="FORMGROUP1">
+	    	<label for="METRICS">Attend a Networking Event</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC1" placeholder="Enter Value">
+	    </div>
+		<div id="FORMGROUP1">
+	    	<label for="METRICS">Write a Thought Leadership Article</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC2" placeholder="Enter Value">
+	    </div>
+		<div id="FORMGROUP1">
+	    	<label for="METRICS">Public Speaking Engagement</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC3" placeholder="Enter Value">
+	    </div>
+
+		<div id="FORMGROUP1">
+	    	<label for="METRICS">Participate in a Media Opportunity</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC4" placeholder="Enter Value">
+	    </div>
+		<div id="FORMGROUP1">
+	    	<label for="METRICS">Initiate a Meeting / Sales Call with New Prospect</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC5" placeholder="Enter Value">
+	    </div>
+		<div id="FORMGROUP1">
+	    	<label for="METRICS">Initiate a Meeting with a Key Influencer</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC6" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS">Introduce a New Service Line to an Existing Client</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC7" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS">Issue a Proposal</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC8" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS">Issue an Engagement Letter to a New Client
+	    	<br>($15,000 or less)</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC9" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS">Issue an Engagement Letter to a New Client
+	    	<br>($16,000 - $100,000)</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC10" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS">Issue an Engagement Letter to a New Client
+	    	<br>($100,000 or more)</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC11" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS">Issue an Engagement Letter to an 
+	    	<br> Existing Client for a New Service<br>($15,000 or less)</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC12" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS"> Issue an Engagement Letter to an 
+	    	<br> Existing Client for a New Service<br>($16,000 or more)</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC13" placeholder="Enter Value">
+	    </div>
+	    <div id="FORMGROUP1">
+	    	<label for="METRICS">Issue an Engagement Letter to an 
+	    	<br>Existing Client for a New Service<br>($100,000 or more)</label>
+	    	<input type="number" name="quantity" class="form-control" id="METRIC14" placeholder="Enter Value">
+	    </div>
+		<div id="FORMGROUP1">
+			<br> <br> <br> <br>
+			<a href="#" class="btn btn-success btn-lg" onclick="main()"><i class="icon-white icon-star-empty"></i> Submit Your Sales!</a>
+		</div>
+
+
+
+	<script>
+		function getValue(element){
+			try {
+				var value = document.getElementById(element).value;
+				return value;
+			}
+			catch(typeError){
+				return null;
+			}
+		};
+
+		function getDate(){
+			var now = new Date();
+			var day = ("0" + now.getDate()).slice(-2);
+			var month = ("0" + (now.getMonth() + 1)).slice(-2);
+			var today = now.getFullYear() + "-" + (month) + "-" + (day);
+			return today;
+		}
+
+		function formatJSON(JSON, list){
+			for (values in list){
+				JSON.push(list[values]);
+			}
+			return JSON;
+		}
+
+		function addJSONDATA(list){
+			return {
+				"P" : parseInt(list[0]),
+				"SM" : parseInt(list[1]),
+				"PD" : parseInt(list[2]),
+				"ASMD" : list[3]
+			};	
+		}
+
+		// function httpGET(URL){
+		// 	var xmlHttp = new XMLHttpRequest();
+		// 	xmlHttp.open("GET", URL, false);
+		// 	return xmlHttp.response.text;
+		// }
+
+		// function httpPOST(URL, data){
+		// 	$.ajax({
+	 //        url: URL,
+	 //        type: "POST",
+	 //        contentType: 'application/json; charset=UTF-8',
+	 //        crossDomain: true,
+	 //        data: data,
+	 //        dataType: "json",
+	 //        xhrFields: {
+	 //        	withCredentials: true
+	 //        },
+	 //        // headers: {
+	        	
+	 //        // },
+	 //        error:function(xhr,status,error){
+	 //            console.log(status);
+  //       	}
+  //   	});
+		// }
+
+		// function httpPOST(URL, DATA){
+		// 	var xmlHttp = new XMLHttpRequest();
+		// 	xmlHttp.open("POST", URL, false);
+		// 	xmlHttp.setRequestHeader("Content-Type","text/json; charset=utf-8");
+		// 	xmlHttp.setRequestHeader("Content-Length", 806);
+		// 	xmlHttp.setRequestHeader("Host","app.fantasysalesteam.com");
+			
+		// 	xmlHttp.send(DATA);
+		// 	return xmlHttp.response.text;
+		// }
+
+		function writeJSON(filename, JSON){
+			$.ajax({
+				type: 'POST',
+				url: filename,
+				data: JSON,
+				contentType: 'application/json; charset=UTF-8',
+				dataType: "json",
+				crossDomain: true,
+			})
+		}
+		function main(){
+			var USERNAME = {"BusinessUnitId": "1516"};
+			var PASSWORD = {"BusinessUnitPassword": "mol4HD*_"};
+
+			var SALESMETRIC = {"SM" : 0};
+			var PLAYERDATAVALUE = {"PD" : getValue(PLAYERID)};
+			var ASMD = {"ASMD": getDate()};
+
+			var TODAY = getDate();
+			var PLAYERID = getValue("PLAYERID");
+
+			LOGIN = [USERNAME, PASSWORD];
+			
+			METRICS = ["METRIC1","METRIC2", "METRIC3", "METRIC4", "METRIC5", "METRIC6", "METRIC7", "METRIC8", "METRIC9", "METRIC10", "METRIC11", "METRIC12", "METRIC13", "METRIC14"]
+
+			METRICIDS = [16062, 16063, 16064, 16065, 16066, 16067, 16068, 16069, 16070, 16071, 16072, 16073, 16074, 16075]
+
+			// PLAYERS:
+			// DAVID: 21794
+			// INGRID: 21724
+			var json = [];
+			var DATA
+			json = formatJSON(json, LOGIN);
+
+			for (metrics in METRICS){
+				if (parseInt(getValue(METRICS[metrics])) > 0){
+					DATA = addJSONDATA([PLAYERID, METRICIDS[metrics], getValue(METRICS[metrics]),TODAY]);
+				}
+			}
+
+			json["Data"] = DATA
+			console.log(json);
+			writeJSON("test.txt",json);
+		}
+	</script>
+</body>
+</html>
