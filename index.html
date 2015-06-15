@@ -188,7 +188,7 @@ img {
 
 		function writeJSON(filename, json){
 			$.ajax({
-				type: "GET",
+				type: "POST",
 				dataType: 'json',
 				async: false,
 				url: filename,
@@ -231,7 +231,7 @@ img {
 
 			json["Data"] = DATA
 			console.log(json);
-			writeJSON("phpwrite.php",json);
+			writeJSON("test.php",json);
 		}
 	</script>
 </body>
